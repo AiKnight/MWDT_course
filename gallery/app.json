@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/galleryindex/galleryindex",
+    "pages/galleryshot/galleryshot",
+    "pages/gallerycollect/gallerycollect",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/galleryindex/galleryindex",
+        "text": "首页",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/galleryshot/galleryshot",
+        "text": "拍照",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/gallerycollect/gallerycollect",
+        "text": "收藏",
+        "iconPath": "",
+        "selectedIconPath": ""
+      }
+    ]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

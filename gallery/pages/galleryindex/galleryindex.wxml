@@ -1,0 +1,15 @@
+<!--pages/galleryindex/galleryindex.wxml-->
+<view class="index_bar">
+  <view class="pic_bar" wx:for="{{list_storage}}">
+    <view class="pic">
+      <image src="{{item.img_url}}" mode="aspectFill"></image>
+    </view>
+    <view class="pic_info">
+      <view class="pic_title">{{item.img_title}}</view>
+      <view class="pic_remarks">{{item.img_remarks}}</view>
+    </view>
+    <view class="collect_bt">
+      <view class="bt {{item.is_collect?'bt_cl':''}}" data-c="{{index}}" bindtap="collect"></view>
+    </view>
+  </view>
+</view>

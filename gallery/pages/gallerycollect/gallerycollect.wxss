@@ -1,0 +1,50 @@
+/* pages/gallerycollect/gallerycollect.wxss */
+.index_bar {
+  width: 750rpx;
+  padding: 0 0rpx;
+  text-align: center;
+}
+
+.pic_bar {
+  width: 95%;
+  height: 150rpx;
+  margin: 10px auto;
+}
+
+.pic {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.pic>image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.pic_info {
+  display: inline-block;
+  width: auto;
+  width: 75%;
+  height: 100%;
+  text-align: left;
+}
+
+.pic_title {
+  display: block;
+  width: 100%;
+  height: 30%;
+
+}
+.pic_remarks {
+  display: block;
+  width: 100%;
+  height: 60%;
+  margin-top: 5%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

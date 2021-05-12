@@ -1,0 +1,28 @@
+/* pages/galleryshot/galleryshot.wxss */
+.placeholder{
+  width: 750rpx;
+  height: 240px;
+  text-align: center;
+  line-height: 240px;
+  color: #666666;
+  font-size: small;
+}
+image{
+  width: 750rpx;
+}
+input{
+  width: 600rpx;
+  margin: 10px auto;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+textarea{
+  width: 600rpx;
+  margin: 10px auto;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
