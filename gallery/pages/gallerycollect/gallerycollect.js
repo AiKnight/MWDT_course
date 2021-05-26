@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list_storage: []
+    list_storage: [],
+    message: true
   },
 
   getPicsList: function () {
@@ -15,19 +16,43 @@ Page({
       key: 'list_storage',
       success(res) {
         console.log(res.data)
-        const list_storage = res.data
+        const list_storage = res.data.filter(v => v.is_collect == true)
+        console.log(list_storage)
+        if (list_storage.length == 0) {
+          taht.setData({
+            message: true
+          })
+        } else {
+          taht.setData({
+            message: false
+          })
+        }
         taht.setData({
-          list_storage
+          list_storage,
+        })
+
+      },
+      fail(err) {
+        taht.setData({
+          message: true
         })
       }
     })
   },
 
+  lightTab: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 2
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getPicsList()
+    // this.getPicsList()
   },
 
   /**
@@ -42,6 +67,7 @@ Page({
    */
   onShow: function () {
     this.getPicsList()
+    this.lightTab()
   },
 
   /**

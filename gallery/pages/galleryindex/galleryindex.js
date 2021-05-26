@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list_storage: []
+    list_storage: [],
+    message: false
   },
-
+  // 获取本地缓存中相册列表
   getPicsList: function () {
     console.log("获取")
     const taht = this
@@ -17,11 +18,18 @@ Page({
         console.log(res.data)
         const list_storage = res.data
         taht.setData({
-          list_storage
+          list_storage,
+          message: false
+        })
+      },
+      fail(err) {
+        taht.setData({
+          message: true
         })
       }
     })
   },
+  // 收藏函数，（反转状态）
   collect: function (c) {
     console.log(c.target.dataset.c)
     const index = c.target.dataset.c
@@ -37,11 +45,20 @@ Page({
     }
     wx.setStorageSync('list_storage', this.data.list_storage)
   },
+  // tab高亮
+  lightTab: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getPicsList()
+    // this.getPicsList()
   },
 
   /**
@@ -55,7 +72,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getPicsList()
+    this.lightTab()
   },
 
   /**

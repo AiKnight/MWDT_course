@@ -4,7 +4,8 @@
     "pages/galleryshot/galleryshot",
     "pages/gallerycollect/gallerycollect",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "custom-tab-bar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,28 +14,22 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/galleryindex/galleryindex",
-        "text": "首页",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "首页"
       },
       {
         "pagePath": "pages/galleryshot/galleryshot",
-        "text": "拍照",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "拍照"
       },
       {
         "pagePath": "pages/gallerycollect/gallerycollect",
-        "text": "收藏",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "收藏"
       }
     ]
   },
-
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

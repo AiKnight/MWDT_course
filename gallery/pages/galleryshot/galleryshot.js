@@ -117,6 +117,14 @@ Page({
       dic
     })
   },
+  lightTab: function(){
+    if (typeof this.getTabBar === 'function' &&
+    this.getTabBar()) {
+    this.getTabBar().setData({
+      selected: 1
+    })
+  }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -135,6 +143,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.lightTab()
 
   },
 
@@ -174,6 +183,19 @@ Page({
   }
 })
 
+
+// Component({
+//   pageLifetimes: {
+//     show() {
+//       if (typeof this.getTabBar === 'function' &&
+//         this.getTabBar()) {
+//         this.getTabBar().setData({
+//           selected: 1
+//         })
+//       }
+//     }
+//   }
+// })
 function newFunction() {
   return 0
 }
